@@ -11,11 +11,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - amitabh.letsdeployit.com
-    secretName: bankapp-tls-secret
+    - smartdevops.com
   ingressClassName: nginx
   rules:
-  - host: "amitabh.letsdeployit.com"
+  - host: "smartdevops.com"
     http:
       paths:
       - path: /
