@@ -6,15 +6,15 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/proxy-body-size: "50m"
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"  # Force HTTPS
-    cert-manager.io/cluster-issuer: letsencrypt-prod  # Use Let's Encrypt
+    # nginx.ingress.kubernetes.io/ssl-redirect: "true"  # Force HTTPS
+    # cert-manager.io/cluster-issuer: letsencrypt-prod  # Use Let's Encrypt
 spec:
   tls:
   - hosts:
-    - smartdevops.com
+    - smartdevops.great-site.net
   ingressClassName: nginx
   rules:
-  - host: "smartdevops.com"
+  - host: "smartdevops.great-site.net"
     http:
       paths:
       - path: /
@@ -30,4 +30,4 @@ spec:
           service:
             name: nginx-service
             port:
-              number: 80             
+              number: 80
