@@ -12,7 +12,7 @@ spec:
   - host: smartdevops.great-site.net
     http:
       paths:
-      - path: /
+      - path: /bankapp
         pathType: Prefix
         backend:
           service:
